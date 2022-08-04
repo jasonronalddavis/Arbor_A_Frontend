@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Provider } from "react-redux";
@@ -12,7 +12,10 @@ ReactDOM.render(
 
     
     <App/>
-  
+    {<img className="BckGrnd" style={{ alignSelf: 'center' }}  alt="default" src={require('./public/Background.png')}
+/>
+//BACKGROUND IMAGE
+}
   </Provider>,
   document.getElementById("root")
 );

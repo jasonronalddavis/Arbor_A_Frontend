@@ -2,37 +2,49 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.logout { 
+  position:relative; top: 400px;  left: 0px; z-index: 20;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.BckGrnd {
+  position:fixed; top: -20px; left: 0px; z-index: -10;
+
+height: 1000px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.LogoutIcon{
+  position:relative; top: -40px;  left: 300px; z-index: 30 ;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.LogoutIcon:hover{
+  transform: scale(1.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.LoginForm{
+  position:relative; top: 50px;  left: 70px; z-index: 30 ;
+  color: 	#ffffff;
+}
+
+
+.Arbor_A_Logo{
+  position:relative; top: 20px;  left: 340px; z-index: 30 ;
+  height: 50px;
+}
+
+.Cart_Icon{
+position:relative; top: -130px;  left: 40px; z-index: 30 ;
+height: 30px;
+}
+
+
+.Cart_Icon:hover{
+  transform: scale(1.2);
+}
+
+.Username{
+  color: 	#ffffff;
 }

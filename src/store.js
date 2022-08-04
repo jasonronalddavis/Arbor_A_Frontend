@@ -8,7 +8,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 //CONTAINS ROOT REDUCER
 
 
-const store = createStore(rootReducer,composeWithDevTools( applyMiddleware(thunk))
+const store = createStore(rootReducer,composeWithDevTools(applyMiddleware(thunk))
 
 )
 
