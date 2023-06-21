@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+.Account header{
+  position:relative; top: 0px;  left: 0px; z-index: 50 ;
+}
 
 .logout { 
   position:relative; top: 400px;  left: 0px; z-index: 20;
@@ -9,13 +12,24 @@
 
 
 .BckGrnd {
-  position:fixed; top: -20px; left: 0px; z-index: -10;
+position:fixed; top: -20px; left: 0px; z-index: -20;
+height: 850px;
+}
 
+.Back_block_w{
+  position:fixed; top: 190px; left: 0px; z-index: 2;
+  height: 390px;
+  width: 1000px;
+}
+
+.Back_block{
+position:fixed; top: 0px; left: 0px; z-index: -5;
 height: 1000px;
+width: 1000px;
 }
 
 .LogoutIcon{
-  position:relative; top: -40px;  left: 300px; z-index: 30 ;
+  position:relative; top: -80px;  left: 300px; z-index: 30 ;
   height: 40px;
 }
 
@@ -24,20 +38,38 @@ height: 1000px;
 }
 
 
+.Contact_Us_Icon:hover{
+  transform: scale(1.2);
+}
+
+
+
 .LoginForm{
-  position:relative; top: 50px;  left: 70px; z-index: 30 ;
-  color: 	#ffffff;
+  position:relative; top: 50px;  left: 70px; z-index: 30;
+        font-size:18px;
+        font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight:350;
+  color: 	#000000;
+}
+
+.LoginHeader{
+  position:relative; top:5px;  left:30px; z-index: 50;
+        font-size:18px;
+        font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight:350;
+  color: 	#000000;
 }
 
 
 .Arbor_A_Logo{
-  position:relative; top: 20px;  left: 340px; z-index: 30 ;
+  position:relative; top: 20px;  left: 90px; z-index: 30 ;
   height: 50px;
 }
 
 .Cart_Icon{
-position:relative; top: -130px;  left: 40px; z-index: 30 ;
+position:relative; top: 50px;  left: 300px; z-index: 30 ;
 height: 30px;
+color: 	#000000;
 }
 
 
@@ -45,6 +77,24 @@ height: 30px;
   transform: scale(1.2);
 }
 
+.Account_Icon:hover{
+  transform: scale(1.2);
+}
+
+.Products_Icon:hover{
+  transform: scale(1.2);
+}
+
+.Wallet_Icon:hover{
+  transform: scale(1.2);
+}
+
+
+
 .Username{
-  color: 	#ffffff;
+  position:relative; top: 30px;  left: 0px; z-index: 50 ;
+  font-size:18px;
+  font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight:150;
+  color: 	#000000;
 }

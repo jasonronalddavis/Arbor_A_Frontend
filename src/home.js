@@ -1,4 +1,5 @@
 import './App.css';
+import './home.css';
 import React from 'react';
 import {connect} from 'react-redux';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';//import ListUsers from "../components/User/users";
@@ -14,11 +15,11 @@ import AppRouter from "./Router";
 //LoginForm IS CURRENTLY THE ONLY MOUNTED COMPONENT
 //ROOT LEVEL OF DIR
 
-function App({user,getCurrentUser,logout},props){
+function Home({user,getCurrentUser,logout},props){
 
   //RREACT HOOK FOR FETCHING AND STORING LOGGED IN USER
   const [fetchUser, setUser] = useState({});
-
+  const [open, setOpen] = useState(false);
 
   // const effectTriggeredRef = useRef(false);
 
@@ -68,43 +69,52 @@ const CartIcon = () => {
       )
 }
 
-
-
-const BackBlocks = () => {
-  return (
-    <img  src={require('./public/back_blocks.jpg')} alt="" id="BackBlock" className="Back_block" />
-      )
-}
-
-const BackBlocks2 = () => {
-  return (
-    <img  src={require('./public/back_blocks 2.jpg')} alt="" id="BackBlock2" className="Back_block_w" />
-      )
-}
-
-
-const Background = () => {
-  return (
-    <img  src={require('./public/home page.png')} alt="" id="Background" className="BckGrnd" />
-      )
-}
-
 const Menu = () => {
-  return (
-    <img  src={require('./public/menu.png')} alt="" id="Menu" className="Menu" />
+    return (
+      <div className={`dropDownContainer ${open? 'active' : 'inactive'}`}>
+
+  <li className='menu'>
+  {<NavLink exact="true"to="/Account"
+className="AccountLink">
+<img  src={require('./public/Account icon.png')} alt="" id="Account" className="Account_Icon"/>
+</NavLink>}
+  </li>
+
+  <li>
+  {<NavLink exact="true"to="/Products"
+className="ProductLink">
+<img  src={require('./public/product icon.png')} alt="" id="Products" className="Products_Icon"/>
+</NavLink>}
+
+{<NavLink exact="true"to="/Wallet"
+className="WallettLink">
+<img  src={require('./public/wallet icon.png')} alt="" id="Wallet" className="Wallet_Icon"/>
+</NavLink>}
+
+{<NavLink exact="true"to="/Contact_us"
+className="Contact_us_Link">
+<img  src={require('./public/contact us icon.png')} alt="" id="Contact_Us" className="Contact_Us_Icon"/>
+</NavLink>}
+  </li>
+  </div>
       )
-}
+  }
+
+
 
 
 
 //CURRENTLY RENDERS SEVERAL GRAPHICAL ELEMENTS WHICH DEPEND ON A USERS LOGGED ON STATUS 
 //COMPONENTS RENDER BASED ON USERS LOGGED ON STATUS
   return (
-  <div className="App">  
-{<Logo/>}
-{<AppRouter/>}
-
-{<Background/>}
+  <div className="Home">  
+{<CartIcon/>}
+{
+<div>
+<img  src={require('./public/menu.png')} alt="" id="Menu" className="Menu" onClick={() => {setOpen(!open)}}/>
+  <ul><Menu/></ul>
+  </div>
+  }
     </div>
   );
 }
@@ -120,4 +130,4 @@ const mapStateToProps = ({user}) => {
 
 
 
- export default connect(mapStateToProps,{getCurrentUser,logout})(App);
+ export default connect(mapStateToProps,{getCurrentUser,logout})(Home);

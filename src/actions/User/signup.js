@@ -36,7 +36,7 @@ export const signup = (credentials) => {
   const userInfo = {
       user: credentials
     }
-    return fetch("http://localhost:3001/api/v1/signup", {
+    return fetch("http://localhost:3000/api/v1/signup", {
       credentials: "include",
       method: "POST",
       headers: {

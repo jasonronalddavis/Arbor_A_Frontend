@@ -36,17 +36,17 @@ function LoginForm({loginData, updateLoginForm, login}) {
 
     return (  
       <div className="login"> 
-      <h3> LOGIN </h3>
+      <h3 className="LoginHeader"> LOGIN </h3>
         <form onSubmit={handleSubmit}>
           <label>username</label>
           <input
-          placeholder="Create a Username"
+          placeholder="Username"
             type="text"
             name="name"
             value={loginData.name} onChange={handleChange}
           /><br/>
           <input
-          placeholder="Create a Password"
+          placeholder="Password"
           type="text"
             name="password"
             value={loginData.password} onChange={handleChange}

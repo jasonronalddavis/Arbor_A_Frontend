@@ -1,0 +1,73 @@
+ul{
+  list-style-type: none;
+}
+
+
+.Account_Icon{
+    position:relative; top: 80px;  left: -280px; z-index: 90;
+    height: 50px; 
+    }
+
+.Products_Icon{
+  position:relative; top: 110px;  left: -80px; z-index: 90;
+  height: 50px;
+  }
+
+
+.Wallet_Icon{
+  position:relative; top: 190px;  left: -240px; z-index: 90;
+  height: 50px;
+  }
+
+.Contact_Us_Icon{
+  position:relative; top: 270px;  left: -420px; z-index: 90;
+  height: 50px;
+}
+
+.Contact_Us_Icon.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease;
+}
+
+.Contact_Us_Icon.inactive{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-80px);
+  transition: var(--speed) ease;
+}
+
+
+
+
+
+    .Menu{
+        position:relative; top: 40px;  left: -250px; z-index: 30;
+        height: 40px;  
+      }
+      .dropDownContainer li{
+        position:relative; top: 00px;  left: 0px; z-index: 30;
+    
+      }
+
+
+      .Menu:hover{
+        transform: scale(1.2);
+      }
+
+
+      .dropDownContainer.active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: var(--speed) ease;
+      }
+
+
+      .dropDownContainer.inactive{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: var(--speed) ease;
+      }

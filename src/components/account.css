@@ -1,0 +1,51 @@
+.LoginForm{
+    position:relative; top: 150px;  left: -160px; z-index: 30;
+  }
+  
+.signup{
+    position:relative; top: 25px;  left: 210px; z-index: 40;
+    margin: 0px auto;
+    width: 50%;
+}
+
+
+.Signup_Header{
+    position:relative; top: 5px;  left: 0px; z-index: 40;
+    font-size:18px;
+    font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight:350;
+    color: 	#000000;
+}
+
+
+    .Account_header{
+        position:relative; top: -250px;  left: 20px; z-index: 50 ;
+        font-size:34px;
+        font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight:100;
+        color: 	#000000;
+    }
+
+    .Arbor_A_Logo{
+        position:relative; top: 20px;  left: 40px; z-index: 30 ;
+        height: 50px;
+      }
+
+      .Home_Logo{
+        position:absolute; top: 60px;  left: 55px; z-index: 90 ;
+        height: 30px; 
+      }
+
+      .Home_Logo:hover{
+        transform: scale(1.2);
+      }
+
+
+      .Menu{
+        position:relative; top: 70px;  left: -270px; z-index: 30 ;
+        height: 40px;  
+      }
+      
+      .Menu:hover{
+        transform: scale(1.2);
+      }
