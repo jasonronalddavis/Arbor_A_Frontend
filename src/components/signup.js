@@ -3,13 +3,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {signup} from "../actions/User/signup.js"
 import {updateSignupForm} from "../actions/User/signup.js"
-
+import {googleSignup} from "../actions/User/googleAuth.js"
 
 //ROOT LEVEL OF COMPONENT DIR
 //MOUNTED ON APP COMPONENT
 
 
-const SignupForm = ({signupFormData, updateSignupForm, signup}) => {
+const SignupForm = ({signupFormData, updateSignupForm, googleAuthData, signup}) => {
 
 
 //EVENT HANDLERS
@@ -19,7 +19,10 @@ const handleSubmit = event => {
   }
 
 
-
+const handleGoogle = event => {
+event.preventDefault()
+googleSignup(googleAuthData)
+}
 
   const  handleChange = event => {
       event.preventDefault();
@@ -30,6 +33,15 @@ const handleSubmit = event => {
        }
        updateSignupForm(updatedFormInfo) 
   }
+
+
+  const GoogleLogo = () => {
+    return (
+      <img  src={require('../public/googlelogo.png')} alt="" id="google_logo" className="Google_Logo"/>
+        )
+  }
+
+
 
 
 //RENDERED FORM 
@@ -54,8 +66,10 @@ return (
          //   onChange={(event) => this.props.handleChange(event)}
             value={signupFormData.password} onChange={handleChange}
           /><label>Password</label><br/>
-<input type="submit" value="signup"/>
-        </form>  
+    <input className="Signup" type="submit" value="signup"/>
+
+        </form>
+        {<GoogleLogo/>}
         </div>      
 )  
 }

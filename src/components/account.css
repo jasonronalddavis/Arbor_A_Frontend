@@ -8,6 +8,22 @@
     width: 50%;
 }
 
+.Signup{
+  position:relative; top: -20px;  left: 10px; z-index: 40;
+  margin: 0px auto;
+  width: 15%;
+
+}
+
+.Google_Logo{
+
+  position:relative; top: 40px;  left: -210px; z-index: 20;
+  height: 90px;  
+}
+
+.Google_Logo:hover{
+  transform: scale(1.2);
+}
 
 .Signup_Header{
     position:relative; top: 5px;  left: 0px; z-index: 40;
